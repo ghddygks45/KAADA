@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+.mgt10 {
+    margin-top: 10px;
+}
+
+.col-red {
+    color: #ff0000;
+}
+
+.pd-lr5 {
+    padding: 0 5px;
+}
+
+.btn-w-fix1 {
+    width: 80px;
+    padding: 0 5px;
+}
+
+.btn-w-fix2 {
+    width: 85px;
+    padding: 0;
+    margin-right: 0;
+}
+
+.res-tab li {
+    width: 170px !important;
+}
+
+.address-input {
+    width: 550px;
+
+    > .zip {
+       font-size: 0;
+
+        > input {
+            width: 459px;
+            font-size: 14px;
+        }
+
+        > a {
+            display: inline-block;
+            width: 90px;
+            height: 40px;
+            background: #242424;
+            line-height: 40px;
+            text-align: center;
+            font-weight: 500;
+            color: #fff;
+            font-size: 14px;
+        }
+    }
+
+    > div:not(:last-child) {
+        margin-bottom: 3px;
+    }
+}
+
+.candidate {
+    position: relative;
+    overflow: hidden;
+
+    .l, .r {
+        width: 487px;
+    }
+
+    .l {
+        float: left;
+    }
+
+    .r {
+        float: right;
+    }
+
+    .c {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+
+        width: 84px;
+        text-align: center;
+
+        li:first-child {
+            margin-bottom: 10px;
+        }
+
+        a {
+            display: inline-block;
+        }
+    }
+
+    .t {
+        font-size: 16px;
+        color: #232323;
+    }
+
+    .candidate-list > div {
+        overflow-y: auto;
+        height: 308px;
+    }
+
+    table {
+        width: 100% !important;
+    }
+}

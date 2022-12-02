@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+@mixin ellipsis($line : 1){
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @if($line == 1){
+    white-space:nowrap;
+    } @else {    
+        white-space: normal;
+        line-height: 1.5;
+        max-height: 1.5*$line+em;
+        word-wrap: break-word;
+        display: -webkit-box;
+        -webkit-line-clamp: $line;
+        -webkit-box-orient: vertical;
+    }
+}
+
+@mixin clear(){
+    &:after{
+        content:'';
+        display:block;
+        clear:both;
+    }
+}
+
+@mixin LNBlistBg(){
+    @for $i from 1 to 11{
+        &:nth-child(#{$i}) > a{background:url('../images/layout/ico_menu0#{$i}_off.png') no-repeat top 9px center} 
+    }
+}
+@mixin LNBlistBgON(){
+    @for $i from 1 to 11{
+        &:nth-child(#{$i}) > a{background:url('../images/layout/ico_menu0#{$i}_on.png') no-repeat top 9px center} 
+    }
+}
+@mixin listMB($mb){
+    &:not(:last-child){margin-bottom:$mb}
+}
+@mixin listMR($mr){
+    &:not(:last-child){margin-right:$mr}
+}
+
+@mixin horizonList($mr, $height, $bg){
+    position:relative;float:left;
+    &:not(:last-child){margin-right:$mr;
+        &:before{content:'';display:block;position:absolute;width:1px;height:$height;background:$bg;top:50%;right:-$mr / 2;margin-top:-$height / 2;}    
+    }
+}
+@mixin MypageBg(){
+    @for $i from 1 to 5{
+        &:nth-child(#{$i}){background:url('../images/common/ico_mypage0#{$i}.png') no-repeat top 45px center} 
+    }
+}
+@mixin MystateBg(){
+    @for $i from 1 to 5{
+        &:nth-child(#{$i}){background:url('../images/main/ico_direct0#{$i}.png') no-repeat top 0 center} 
+    }
+}
+@mixin siteBg(){
+    @for $i from 1 to 4{
+        &:nth-child(#{$i}){background:url('../images/main/img_login_link0#{$i}.jpg') no-repeat top 0 center} 
+    }
+}
+
+@mixin icoBg($first, $last){
+    @for $i from $first to $last{
+        &:nth-child(#{$i}){background:url('../images/sub/ico_info0#{$i}.png') no-repeat top 0 left 0}
+    }
+}

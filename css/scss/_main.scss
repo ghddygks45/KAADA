@@ -1,0 +1,125 @@
+@charset "utf-8";
+.main_img_box{
+    img{min-width:100%}
+}
+#main{position:relative;top:-51px;margin-bottom:-65px;
+    .inner{width:1030px;margin:0 auto}
+}
+.main_search_wrap{
+    .main_search_box{@include clear();font-size:19px;color:#232323;
+        .search_premise{@include clear();float:left;height:100px;
+            .group{float:left;width:163px;position:relative;
+                &:before{content:'Group';left:30px;top:26px;display:block;position:absolute;color:#a1a1a1;font-size:14px}
+                .tt{height:100px;padding:52px 20px 10px 30px;background:url('../images/main/btn_select_arrow.png') no-repeat bottom 32px right 20px;background-color:#fff;border:solid 1px #e8e8e8;margin-right:-1px;cursor:pointer;}
+               > ul{display:none;margin:-1px -1px 0 0;padding:8px 0;border:solid 1px #e8e8e8;background:#fff;position:relative;z-index:1;
+                   > li{@include listMB(9px);
+                            > a{display:table-cell;width:100vw;height:28px;padding:0 30px;vertical-align:middle;color:#232323}
+                        }
+                    &.open{display:block;}
+                   }
+                   
+            }
+            .class{float:left;position:relative;width:163px;
+                &:before{content:'Class';display:block;left:30px;top:26px;position:absolute;color:#a1a1a1;font-size:14px}
+                .tt{height:100px;padding:52px 20px 10px 30px;background:url('../images/main/btn_select_arrow.png') no-repeat bottom 32px right 20px;background-color:#fff;border:solid 1px #e8e8e8;margin-right:-1px;cursor:pointer;}
+                > ul{display:none;margin:-1px -1px 0 0;padding:8px 0;border:solid 1px #e8e8e8;background:#fff;position:relative;z-index:1;
+                    > li{@include listMB(9px);
+                             > a{display:table-cell;width:100vw;height:28px;padding:0 30px;vertical-align:middle;color:#232323}
+                         }
+                     &.open{display:block;}
+                    }
+            }
+        }
+    }
+    .inp_box{float:left;width:539px;border-right:solid 1px #e8e8e8;margin-right:-1px;height:99px;
+        input{padding:0 30px;height:100px;font-size:19px;color:#232323}
+    }
+    .search_btn{float:left;display:block;border:solid 1px #e8e8e8;border-top:0;border-right:0;
+        img{width:100%}
+    }   
+}
+.my_state_wrap{margin-top:60px;
+    .my_state_box{
+        > ul{overflow:hidden;padding:0 44px;
+            > li{float:left;padding-top:92px;@include listMR(100px);@include MystateBg();
+                .tt{display:block;color:#2c1d20;font-size:18px;font-weight:500;text-align:center;}
+                > ul{padding-top:25px;
+                    > li{@include listMB(4px);font-weight:500;font-size:14px;
+                            .a{position:relative;float:left;margin-right:10px;color:#88898a;text-align-last:justify;
+                                &:before{content:':';display:block;position:absolute;right:-7px;}
+                            }
+                            .q{display:block;color:#232323;text-align:right;overflow:hidden;}
+                    }
+                }
+                &:nth-child(1){width:156px;
+                    >ul>li .a{width:53px}
+                }
+                &:nth-child(2){width:139px;
+                    >ul>li .a{width:44px}
+                }
+                &:nth-child(3){width:137px;
+                    >ul>li .a{width:40px}
+                }
+                &:nth-child(4){width:209px;
+                    >ul>li .a{width:66px}
+                }
+            }
+        }
+    }
+}
+.course_status_box{position:relative;margin-top:81px;
+    .tt{position:relative;padding:0 0 19px 11px;color:#333;font-size:28px;font-weight:500;font-family:NanumBarunGothic;
+        &:after{content:'';left:0;bottom:0;display:block;position:absolute;width:100%;height:7px;background:url('../images/main/img_border.png') no-repeat center}
+    }
+    .cont_box{
+        > ul{
+            > li{position:relative;padding:27px 100px 29px 0;margin:0 20px 0 11px;border-bottom:solid 1px #e0e0e0;color:#2c1d20;
+                .course_tt{@include ellipsis(1);width:100%;display:inline-block;padding-bottom:10px;font-size:21px;font-weight:500;color:#2c1d20}
+                .course_list{overflow:hidden;
+                    >li{float:left;@include listMR(11px)}
+                }
+                .cours_btn{position:absolute;top:40px;right:25px;font-size:21px;font-weight:500;color:#2c1d20;}
+            }
+        }
+    }
+    .more{position:absolute;top:8px;right:12px;color:#999999;font-size:14px;font-weight:500;font-family:NanumBarunGothic;vertical-align:middle;
+        img{vertical-align:middle;margin-left:15px}
+    }
+}
+.web_site_box{margin-top:17px;
+    .commont{padding-left:17px;color:#2c1d20}
+    ul{margin:10px 17px 0 11px;overflow:hidden;
+        > li{float:left;@include listMR(9px);}
+    }
+}
+.necessary_edu_wrap{margin-top:89px;
+    .necessary_edu_box{padding-bottom:20px;border:solid 1px #d7d7d7;text-align:center;
+        .tt{position:relative;top:-14px;padding:0 29px;color:#323232;font-size:24px;font-weight:400;background:#fff;
+            .st{font-weight:500}
+        }
+        .necessary_tbl_box{padding-top:8px;width:770px;margin:0 auto;
+            .tbl_wrap{margin:0;
+                thead{
+                    tr{
+                        th{height:50px;line-height:normal;
+                            &:first-child{background:#fff;color:#666;font-weight:500}
+                        }
+                    }
+                }
+                td:last-child,th:last-child{border-right:0}
+                tbody{
+                    tr{ 
+                        td{height:48px;
+                            &:first-child{background:#fff;color:#666;font-weight:500}
+                        }
+                        
+                    }
+                }
+                &:not(:first-child){
+                    tbody tr{border-bottom:solid 1px #e8e8e8;
+                    }
+                }
+            }
+        }
+    }
+}
